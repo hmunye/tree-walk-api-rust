@@ -1,5 +1,5 @@
 [package]
-name = "tree-walk-api"
+name = "tree_walk_api"
 version = "0.1.0"
 edition = "2021"
 
