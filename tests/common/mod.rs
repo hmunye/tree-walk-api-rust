@@ -18,7 +18,5 @@ pub async fn spawn_server() -> TestServer {
 
     let addr = format!("{}:{}", "http://127.0.0.1", port);
 
-    TestServer {
-        addr
-    }
+    TestServer { addr }
 }
