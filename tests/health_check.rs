@@ -12,10 +12,6 @@ async fn health_check_test() {
         .await
         .expect("Failed to process request");
 
-    println!("\n");
-    println!("==> Response for {} {}", reqwest::Method::GET, url);
-    println!("\n");
-
     assert!(response.status().is_success());
     assert_eq!(Some(14), response.content_length());
 }

@@ -12,7 +12,7 @@ pub async fn spawn_server() -> TestServer {
         .expect("Failed to bind to address");
 
     let port = listener.local_addr().unwrap().port();
-    let server = http::serve(listener);
+    let server = http::serve(listener).expect("Failed to start test server");
 
     tokio::spawn(async move { server.await });
 
